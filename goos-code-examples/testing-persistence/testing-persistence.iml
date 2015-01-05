@@ -17,10 +17,16 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="jpa" level="project" />
-    <orderEntry type="library" name="javadb" level="project" />
-    <orderEntry type="library" name="junit" level="project" />
-    <orderEntry type="library" name="hamcrest" level="project" />
     <orderEntry type="module" module-name="common" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../lib" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
