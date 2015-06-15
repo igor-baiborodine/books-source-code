@@ -1,0 +1,12 @@
+@import "../reindeer/reindeer.scss";
+
+@include reindeer;
+
+.v-app .v-Notification-system {
+  background-color: #b2b0b4;
+  color: black;
+}
+
+.v-app .v-Notification-system h1 {
+  color: #f72114;
+}

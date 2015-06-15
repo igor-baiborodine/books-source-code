@@ -1,0 +1,23 @@
+@import "../reindeer/reindeer.scss";
+
+@mixin mytheme {
+  @include reindeer;
+  
+
+  .myTable .v-table-row,
+  .myTable .v-table-row-odd {
+	background: white;	
+  }
+
+  .myTable .v-table-row:hover, 
+  .myTable .v-table-row-odd:hover {
+	background-color: gold;
+	cursor: pointer;	
+  }
+
+  .myTable .v-table-cell-content {
+	text-align: center;
+	border-top: 1px solid lightgray;	
+  }
+   
+}

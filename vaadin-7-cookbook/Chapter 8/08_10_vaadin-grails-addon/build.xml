@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<project name="Widgetset compiler" basedir="." default="compile-widgetset">
+    <!-- Build the widget set. -->
+    <target name="compile-widgetset">
+        <path id="classpath">
+            <!-- The source location must be first, as required by generate-widgetset. -->
+            <pathelement path="grails-app/vaadin"/>
+            <pathelement path="src/java"/>
+            <pathelement path="target/classes"/>
+            <fileset dir="libs-widgetset">
+                <include name="*.jar"/>
+            </fileset>
+        </path>
+        <echo>Compiling ${widgetset}...</echo>
+        <property name="module" value="app.AppWidgetSet" />
+        <property name="module.output.dir" location="web-app/VAADIN/widgetsets" />
+        <property name="localWorkers" value="2" />
+        <mkdir dir="${module.output.dir}" />
+        <!-- compile the module -->
+        <java classname="com.google.gwt.dev.Compiler" classpathref="classpath" failonerror="yes" fork="yes" maxmemory="512m">
+            <arg value="-war" />
+            <arg value="${module.output.dir}" />
+            <arg value="-localWorkers" />
+            <arg value="${localWorkers}" />
+            <arg value="-strict" />
+            <arg value="${module}" />
+            <sysproperty key="vFailIfNotSerializable" value="true" />
+            <jvmarg value="-Xss80M" />
+            <jvmarg value="-XX:MaxPermSize=456M" />
+            <jvmarg value="-Djava.awt.headless=true" />
+        </java>
+    </target>
+</project>

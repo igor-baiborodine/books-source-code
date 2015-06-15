@@ -1,0 +1,1 @@
+Folder VAADIN insert to the folder WebContent in Vaadin project.

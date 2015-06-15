@@ -1,0 +1,18 @@
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'scala'
+    
+repositories {
+    mavenCentral()
+}
+    
+dependencies {
+    scalaTools 'org.scala-lang:scala-compiler:2.10.0'
+    scalaTools 'org.scala-lang:scala-library:2.10.0'
+    compile 'org.scala-lang:scala-library:2.10.0'
+    compile group:'com.vaadin', name:'vaadin-server', version:'7.0.0.rc1'
+    compile group:'com.vaadin', name:'vaadin-client', version:'7.0.0.rc1'
+    compile group:'com.vaadin', name:'vaadin-client-compiled', version:'7.0.0.rc1'
+    compile group:'com.vaadin', name:'vaadin-themes', version:'7.0.0.rc1'
+    compile group:'com.vaadin', name:'vaadin-client-compiler', version:'7.0.0.rc1'
+}
