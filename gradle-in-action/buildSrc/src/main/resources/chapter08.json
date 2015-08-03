@@ -1,0 +1,38 @@
+{
+    "parentDir": "chapter08",
+    "projects": [
+        {
+            "dir": "listing_08_01-buildscript-classpath",
+            "args": ["-b", "cloudbees.gradle"],
+            "tasks": ["tasks"]
+        },
+        {
+            "dir": "listing_08_02-cloudbees-app-info",
+            "args": ["-PappId=gradle-in-action/todo"],
+            "tasks": ["tasks"]
+        },
+        {
+            "dir": "listing_08_03-cloudbees-deploy-war",
+            "args": ["-PappId=gradle-in-action/todo", "-PwarFile=todo.war"],
+            "tasks": ["tasks"]
+        },
+        {
+            "dir": "listing_08_04-06-cloudbees-custom-tasks",
+            "args": ["-PappId=gradle-in-action/todo", "-PwarFile=todo.war"],
+            "tasks": ["tasks"]
+        },
+        {
+            "dir": "listing_08_07-08-cloudbees-refactored-tasks",
+            "args": ["-PappId=gradle-in-action/todo", "-PwarFile=todo.war"],
+            "tasks": ["tasks"]
+        },
+        {
+            "dir": "listing_08_18-19-cloudbees-standalone-object-plugin/plugin",
+            "tasks": ["clean", "assemble", "uploadArchives"]
+        },
+        {
+            "dir": "listing_08_18-19-cloudbees-standalone-object-plugin/todo",
+            "tasks": [":web:tasks"]
+        }
+    ]
+}
