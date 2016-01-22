@@ -1,0 +1,48 @@
+<ui:composition xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ext="http://edorasframework.org/extfaces/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:pf="http://portletfaces.org/facelets"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:form>
+		<h:dataTable border="0" headerClass="headerBgColor"
+			value="#{bookCatalogBean.books}" var="item" width="80%"
+			rowClasses="oddRow, evenRow">
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Name" />
+				</f:facet>
+				<h:outputText value="#{item.name}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Author" />
+				</f:facet>
+				<h:outputText value="#{item.author}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="ISBN Number" />
+				</f:facet>
+				<h:outputText value="#{item.isbnNumber}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Action" />
+				</f:facet>
+				<b><h:commandLink value="Remove"
+					action="#{bookCatalogBean.removeBook}">
+					<f:param name="isbnNumber" value="#{item.isbnNumber}">
+					</f:param>
+				</h:commandLink></b>
+			</h:column>
+		</h:dataTable>
+		<br />
+		<table width="80%">
+			<tr align="right">
+				<td><h:commandButton
+					action="#{bookCatalogBean.showAddBookForm}" value="Add Book" /></td>
+			</tr>
+		</table>
+	</h:form>
+</ui:composition>

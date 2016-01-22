@@ -1,0 +1,23 @@
+.headerBgColor {
+	background-color: #99CCFF;
+	font-family: 'arial';
+	font-size: 9pt;
+}
+.evenRow {
+	background-color: #FFCC88;
+	font-family: 'arial';
+	font-size: 9pt;
+}
+.oddRow {
+	background-color: #CCFFEE;
+	font-family: 'arial';
+	font-size: 9pt;
+}
+.plainText {
+	font-family: 'arial';
+	font-size: 9pt;
+}
+.headerText{
+	font-family: 'arial';
+	font-size: 12pt;
+}

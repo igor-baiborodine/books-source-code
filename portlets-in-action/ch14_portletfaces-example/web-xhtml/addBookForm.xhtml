@@ -1,0 +1,61 @@
+<html xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:ext="http://edorasframework.org/extfaces/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:pf="http://portletfaces.org/facelets"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Book Catalog Web Application</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:outputStylesheet name="bookCatalog.css" library="styles" />
+		<h:panelGrid columns="4" id="addBookPanel" columnClasses="plainText">
+			<f:facet name="header">
+				<h:outputText styleClass="headerText" value="Add Book" />
+			</f:facet>
+			<h:outputText value="Title *" />
+			<h:inputText id="title" value="#{bookCatalogBean.book.name}"
+				required="true" requiredMessage="Please enter book title">
+				<f:ajax event="blur" render="titleErrorMsg" />
+			</h:inputText>
+			<h:message styleClass="plainText"  id="titleErrorMsg" for="title" />
+			<h:outputText value="" />
+
+			<h:outputText value="Author *" />
+			<h:inputText id="author" value="#{bookCatalogBean.book.author}"
+				required="true" requiredMessage="Please enter author name(s)">
+				<f:ajax event="blur" render="authorErrorMsg" />
+			</h:inputText>
+			<h:message styleClass="plainText"  id="authorErrorMsg" for="author" />
+			<h:outputText value="" />
+
+			<h:outputText value="ISBN Number *" />
+			<h:inputText id="isbnNumber"
+				value="#{bookCatalogBean.book.isbnNumber}"
+				valueChangeListener="#{bookCatalogBean.validateIsbn}"
+				converterMessage="Please enter a valid ISBN Number" required="true"
+				requiredMessage="Please enter ISBN Number">
+				<f:convertNumber type="number" />
+				<f:ajax event="blur"
+					render="isbnNumberErrorMsg isbnNumberValidationMsg" />
+			</h:inputText>
+			<h:message styleClass="plainText"  id="isbnNumberErrorMsg" for="isbnNumber" />
+			<h:outputText id="isbnNumberValidationMsg"
+				value="#{bookCatalogBean.errorMap.isbnNumber}" />
+		</h:panelGrid>
+
+		<br />
+		<table width="30%">
+			<tr align="left">
+			<h:outputText styleClass="plainText" value="* indicates mandatory fields" />
+			</tr>
+			<tr align="right">
+				<h:commandButton value="Add Book"
+					action="#{bookCatalogBean.addBook}">
+				</h:commandButton>
+			</tr>
+		</table>
+	</h:form>
+</h:body>
+</html>

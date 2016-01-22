@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>bookCatalog</portlet-name>
+		<portlet-class>chapter10.code.listing.base.BookCatalogPortlet</portlet-class>
+		<init-param>
+			<name>uploadFolder</name>
+			<value>C:\\xyz</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<cache-scope>private</cache-scope>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>print</portlet-mode>
+			<portlet-mode>help</portlet-mode>
+			<window-state>pop_up</window-state>
+		</supports>
+		<resource-bundle>content.Language-ext</resource-bundle>
+		<portlet-info>
+			<title>Book Catalog</title>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>maxNumOfBooks</name>
+				<value>1000</value>
+			</preference>
+			<preference>
+				<name>greetingMessage</name>
+				<value>Hello !</value>
+				<read-only>true</read-only>
+			</preference>
+			<preferences-validator>
+			chapter10.code.listing.base.BookCatalogPrefsValidator
+			</preferences-validator>
+		</portlet-preferences>
+	</portlet>
+	<custom-portlet-mode>
+		<portlet-mode>print</portlet-mode>
+	</custom-portlet-mode>
+	<custom-window-state>
+		<window-state>pop_up</window-state>
+	</custom-window-state>
+	<user-attribute>
+		<description>user first name</description>
+		<name>user.name.given</name>
+	</user-attribute>
+	<user-attribute>
+		<description>user last name</description>
+		<name>user.name.family</name>
+	</user-attribute>
+	<container-runtime-option>
+		<name>javax.portlet.actionScopedRequestAttributes</name>
+		<value>true</value>
+	</container-runtime-option>
+	<container-runtime-option>
+		<name>javax.portlet.renderHeaders</name>
+		<value>true</value>
+	</container-runtime-option>
+</portlet-app>

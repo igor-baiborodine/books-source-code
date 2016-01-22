@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>recentBook</portlet-name>
+		<portlet-class>
+			chapter12.code.listing.base.RecentlyAddedBookPortlet
+		</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<cache-scope>private</cache-scope>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language-ext</resource-bundle>
+		<portlet-info>
+			<title>Recently Added Book</title>
+		</portlet-info>
+	</portlet>
+	<portlet>
+		<portlet-name>bookCatalog</portlet-name>
+		<portlet-class>chapter12.code.listing.base.BookCatalogPortlet</portlet-class>
+		<expiration-cache>1000</expiration-cache>
+		<cache-scope>private</cache-scope>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>print</portlet-mode>
+			<portlet-mode>help</portlet-mode>
+			<window-state>pop_up</window-state>
+		</supports>
+		<supports>
+			<mime-type>image/png</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language-ext</resource-bundle>
+		<portlet-info>
+			<title>Book Catalog - Rich Portlet</title>
+		</portlet-info>
+	</portlet>
+	<custom-portlet-mode>
+		<portlet-mode>print</portlet-mode>
+	</custom-portlet-mode>
+	<custom-window-state>
+		<window-state>pop_up</window-state>
+	</custom-window-state>
+	<user-attribute>
+		<description>user first name</description>
+		<name>user.name.given</name>
+	</user-attribute>
+	<user-attribute>
+		<description>user last name</description>
+		<name>user.name.family</name>
+	</user-attribute>
+	<container-runtime-option>
+		<name>javax.portlet.actionScopedRequestAttributes</name>
+		<value>true</value>
+	</container-runtime-option>
+	<container-runtime-option>
+		<name>javax.portlet.renderHeaders</name>
+		<value>true</value>
+	</container-runtime-option>
+	<container-runtime-option>
+		<name>javax.portlet.escapeXml</name>
+		<value>false</value>
+	</container-runtime-option>
+</portlet-app>

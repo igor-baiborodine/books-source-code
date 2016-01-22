@@ -1,0 +1,1 @@
+<jsp:forward page="/bookCatalogApp"></jsp:forward>

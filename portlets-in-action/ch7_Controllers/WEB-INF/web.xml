@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+                         "http://java.sun.com/dtd/web-app_2_4.dtd">
+
+<web-app>
+		<!--
+		- The ViewRendererServlet acts as a bridge from Portlet requests to Servlet requests.
+		- Thus a Spring Portlet is able to leverage Spring MVC's view rendering capabilities.
+	-->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>view-servlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.ViewRendererServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>view-servlet</servlet-name>
+		<url-pattern>/WEB-INF/servlet/view</url-pattern>
+	</servlet-mapping>
+</web-app>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>portletModeHandlerMappingExample</portlet-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>help</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language-ext</resource-bundle>
+		<portlet-info>
+			<title>Book Catalog(PortletModeHandlerMapping example )</title>
+		</portlet-info>
+	</portlet>
+	<portlet>
+		<portlet-name>portletModeParameterHandlerMappingExample</portlet-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>help</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language-ext</resource-bundle>
+		<portlet-info>
+			<title>Book Catalog(PortletModeParameterHandlerMapping example)</title>
+		</portlet-info>
+	</portlet>	
+	<portlet>
+		<portlet-name>parameterHandlerMappingExample</portlet-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language-ext</resource-bundle>
+		<portlet-info>
+			<title>Book Catalog(ParameterHandlerMapping example)</title>
+		</portlet-info>
+	</portlet>	
+	<portlet>
+		<portlet-name>handlerMappingChainExample</portlet-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>help</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language-ext</resource-bundle>
+		<portlet-info>
+			<title>Book Catalog(HandlerMapping chain example)</title>
+		</portlet-info>
+	</portlet>	
+</portlet-app>

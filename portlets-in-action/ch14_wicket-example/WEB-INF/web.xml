@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="2.5"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   
+                      http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<filter>
+		<filter-name>BookCatalogApp</filter-name>
+		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+		<init-param>
+			<param-name>configuration</param-name>
+			<param-value>deployment</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detectPortletContext</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>chapter14.code.listing.BookCatalogApp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>filterMappingUrlPattern</param-name>
+			<param-value>/bookCatalogApp/*</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>BookCatalogApp</filter-name>
+		<url-pattern>/bookCatalogApp/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>chapter14.code.listing.servlet.BookCatalogContextListener</listener-class>
+	</listener>
+</web-app>

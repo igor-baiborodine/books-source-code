@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!-- define the project -->
+<project name="ch14_portlefaces-example" default="build" basedir=".">
+
+	<!-- define project properties -->
+	<property name="compiler" value="modern" />
+	<property name="fork" value="no" />
+	<property name="verbose" value="no" />
+	<property name="debug" value="on" />
+	<property name="optimize" value="on" />
+	<property name="deprecation" value="on" />
+	<property name="target" value="1.5" />
+	<property name="source" value="1.5" />
+	<property file="build.properties" />
+	<property environment="env" />
+
+	<!-- define properties to refer to directories in the project -->
+	<property name="webinf.dir" value="WEB-INF" />
+	<property name="resources.dir" value="resources" />
+	<property name="webinf.lib.dir" value="WEB-INF/lib" />
+	<property name="lib.dir" value="lib" />
+	<property name="src.dir" value="src" />
+	<property name="test.dir" value="test" />
+	<property name="build.dir" value="build" />
+	<property name="webinf.classes.dir" value="${webinf.dir}/classes" />
+	<property name="webinf.classes.content.dir" value="${webinf.dir}/classes/content" />
+	<property name="xhtml.dir" value="xhtml" />
+	<property name="xhtml.web.dir" value="web-xhtml" />
+	<property name="xhtml.portlet.dir" value="portlet-xhtml" />
+	<property name="web.xml" value="${webinf.dir}/web.xml" />
+
+	<fileset id="portletapp.libs" dir="${webinf.lib.dir}">
+		<include name="*.jar" />
+	</fileset>
+	
+	<fileset id="libs" dir="${lib.dir}">
+		<include name="*.jar" />
+	</fileset>
+
+	<path id="class.path">
+		<pathelement path="${webinf.classes.dir}" />
+		<fileset refid="portletapp.libs" />
+		<fileset refid="libs" />
+	</path>
+
+	<pathconvert pathsep=":" property="class.path" refid="class.path" />
+
+	<fileset id="webapp.war.files" dir=".">
+		<include name="${webinf.dir}/**" />
+		<include name="${resources.dir}/**" />
+		<exclude name="${webinf.dir}/Language-ext*.properties" />
+		<exclude name="${webinf.dir}/liferay-*.xml" />
+		<exclude name="${webinf.dir}/portlet.xml" />
+		<exclude name="${webinf.dir}/lib/*portletfaces*.jar"/>
+		<include name="index.jsp" />
+		<include name="xhtml/**"/>
+		<exclude name="${web.xml}" />
+	</fileset>
+
+	<fileset id="portlet.war.files" dir=".">
+		<include name="${webinf.dir}/**" />
+		<include name="${resources.dir}/**" />
+		<exclude name="${webinf.dir}/Language-ext*.properties" />
+		<include name="images/**" />
+		<include name="xhtml/**"/>
+		<exclude name="${web.xml}" />
+	</fileset>
+
+	<!-- compile target to compile the sources -->
+	<target name="webapp-compile">
+		<mkdir dir="${webinf.classes.dir}" />
+		<javac srcdir="${src.dir}:${test.dir}" destdir="${webinf.classes.dir}" fork="${fork}" verbose="${verbose}" deprecation="${deprecation}" debug="${debug}" optimize="${optimize}" compiler="${compiler}" target="${target}" source="${source}">
+			<classpath refid="class.path" />
+		</javac>
+		<copy todir="${webinf.classes.dir}" preservelastmodified="true">
+			<fileset dir="${src.dir}">
+				<include name="**/*.properties" />
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+		<copy todir="${xhtml.dir}" preservelastmodified="true" overwrite="true">
+			<fileset dir="${xhtml.web.dir}">
+				<include name="**/*.xhtml" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="portlet-compile">
+		<mkdir dir="${webinf.classes.dir}" />
+		<!-- Content directory contains Liferay resource bundle-->
+		<mkdir dir="${webinf.classes.content.dir}" />
+		<javac srcdir="${src.dir}:${test.dir}" destdir="${webinf.classes.dir}" fork="${fork}" verbose="${verbose}" deprecation="${deprecation}" debug="${debug}" optimize="${optimize}" compiler="${compiler}" target="${target}" source="${source}">
+			<classpath refid="class.path" />
+		</javac>
+		<copy todir="${webinf.classes.dir}" preservelastmodified="true">
+			<fileset dir="${src.dir}">
+				<include name="**/*.properties" />
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+		<copy todir="${webinf.classes.content.dir}">
+			<fileset dir="${webinf.dir}">
+				<include name="Language-ext*.properties" />
+			</fileset>
+		</copy>
+		<copy todir="${xhtml.dir}" preservelastmodified="true" overwrite="true">
+			<fileset dir="${xhtml.portlet.dir}">
+				<include name="**/*.xhtml" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- target to create the project WAR file -->
+	<target name="build-portletapp" depends="clean,portlet-compile">
+		<mkdir dir="${build.dir}" />
+		<war destfile="${build.dir}/portlefaces-example.war" webxml="${web.xml}">
+			<fileset refid="portlet.war.files" />
+		</war>
+		<copy todir="${liferay.portal.home}/deploy">
+			<fileset dir="${build.dir}">
+				<include name="**/portlefaces-example.war" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- target to create the project WAR file -->
+	<target name="build-webapp" depends="clean,webapp-compile">
+		<mkdir dir="${build.dir}" />
+		<war destfile="${build.dir}/jsf-webapp-example.war" webxml="${web.xml}">
+			<fileset refid="webapp.war.files" />
+		</war>
+		<copy todir="${tomcat.home}/webapps">
+			<fileset dir="${build.dir}">
+				<include name="**/jsf-webapp-example.war" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build" depends="build-webapp, build-portletapp">
+	</target>
+	
+	<!-- target to clean up all files created by various tasks -->
+	<target name="clean">
+		<delete quiet="true" includeemptydirs="true">
+			<fileset dir="${webinf.classes.dir}" includes="**/*" />
+			<fileset dir="${build.dir}" />
+			<fileset dir="${work.dir}" />
+		</delete>
+	</target>
+</project>

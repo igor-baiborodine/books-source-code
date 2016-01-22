@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.0.xsd        
+        ">
+	<bean id="bookService" class="chapter07.code.listing.service.BookServiceImpl" />
+
+	<bean id="editModeController" class="chapter07.code.listing.controller.EditModeController" />
+	<bean id="helpModeController" class="chapter07.code.listing.controller.HelpModeController" />
+	<bean id="showBooksController" class="chapter07.code.listing.controller.BooksController">
+		<property name="bookService">
+			<ref bean="bookService" />
+		</property>
+	</bean>
+
+	<bean id="addBookController" class="chapter07.code.listing.controller.AddBookController">
+		<property name="bookService">
+			<ref bean="bookService" />
+		</property>
+	</bean>
+
+	<bean id="editBookController" class="chapter07.code.listing.controller.EditBookController">
+		<property name="bookService">
+			<ref bean="bookService" />
+		</property>
+	</bean>
+
+	<bean id="removeBookController" class="chapter07.code.listing.controller.RemoveBookController">
+		<property name="bookService">
+			<ref bean="bookService" />
+		</property>
+	</bean>
+
+	<bean id="exceptionResolver"
+		class="org.springframework.web.portlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<map>
+				<entry key="Exception" value="exception" />
+			</map>
+		</property>
+		<property name="mappedHandlers">
+			<set>
+				<ref bean="addBookController" />
+				<ref bean="editBookController" />
+			</set>
+		</property>
+	</bean>
+
+	<bean id="parameterHandlerMapping"
+		class="org.springframework.web.portlet.handler.ParameterHandlerMapping">
+		<property name="defaultHandler" ref="showBooksController" />
+		<property name="parameterName" value="myaction" />
+		<property name="parameterMap">
+			<map>
+				<entry key="books" value-ref="showBooksController" />
+				<entry key="addBook" value-ref="addBookController" />
+				<entry key="addBookForm" value-ref="addBookController" />
+				<entry key="editBook" value-ref="editBookController" />
+				<entry key="editBookForm" value-ref="editBookController" />
+				<entry key="removeBook" value-ref="removeBookController" />
+			</map>
+		</property>
+	</bean>
+</beans>

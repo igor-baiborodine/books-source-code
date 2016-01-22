@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+	<display-name>Book Catalog</display-name>
+	<servlet>
+		<servlet-name>DwrServlet</servlet-name>
+		<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+		<init-param>
+			<param-name>activeReverseAjaxEnabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>maxWaitAfterWrite</param-name>
+			<param-value>-1</param-value>
+		</init-param>
+		<init-param>
+			<param-name>org.directwebremoting.extend.ScriptSessionManager</param-name>
+			<param-value>chapter12.code.listing.dwr.MySessionManager</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>scriptSessionInitializer</servlet-name>
+		<servlet-class>chapter12.code.listing.dwr.MyScriptSessionInitializer</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<listener>
+		<listener-class>chapter12.code.listing.servlet.listener.BookCatalogContextListener</listener-class>
+	</listener>
+	<servlet-mapping>
+		<servlet-name>DwrServlet</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+</web-app>

@@ -1,0 +1,1 @@
+This page will allow you to personalize the Book Catalog portlet.

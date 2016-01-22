@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<portlet-app
+	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xmlns:n="http://www.portlets-in-action.com/"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>recentBook</portlet-name>
+		<portlet-class>
+			chapter11.code.listing.base.RecentlyAddedBookPortlet
+		</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<cache-scope>private</cache-scope>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language-ext</resource-bundle>
+		<portlet-info>
+			<title>Recently Added Book</title>
+		</portlet-info>
+		<supported-public-render-parameter>
+			recentBookIsbn
+		</supported-public-render-parameter>
+	</portlet>
+	<default-namespace>http://www.mynamespace.com</default-namespace>
+	<public-render-parameter>
+		<identifier>recentBookIsbn</identifier>
+		<qname xmlns:n="http://www.mynamespace.com">
+			n:myBookISBN
+		</qname>
+	</public-render-parameter>
+</portlet-app>
