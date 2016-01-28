@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.inkwell.internet.slogan.model.impl.SloganModelImpl">
+		<attributes>
+			<id name="sloganId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="sloganDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="sloganText" />
+			<basic name="status" />
+			<basic name="statusByUserId" />
+			<basic name="statusByUserName" />
+			<basic name="statusDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<transient name="primaryKey" />
+			<transient name="statusByUserUuid" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.inkwell.internet.slogan.model.impl.SloganImpl" name="Slogan">
+		<table name="Slogan_Slogan" />
+		<attributes>
+			<transient name="averageScore" />
+			<transient name="sloganIdString" />
+		</attributes>
+	</entity>
+</entity-mappings>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 5.2.0//EN" "http://www.liferay.com/dtd/liferay-hook_5_2_0.dtd">
+
+<hook>
+  <portal-properties>portal.properties</portal-properties>
+
+  <language-properties>content/Language_en.properties</language-properties>
+
+  <custom-jsp-dir>/META-INF/custom_jsps</custom-jsp-dir>
+
+  <service>
+    <service-type>com.liferay.portlet.shopping.service.ShoppingCategoryLocalService</service-type>
+    <service-impl>com.liferay.portlet.shopping.service.impl.InkwellShoppingCategoryLocalServiceImpl</service-impl>
+  </service>
+</hook>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.inkwell.internet.slogan.service.SloganLocalService" class="com.inkwell.internet.slogan.service.impl.SloganLocalServiceImpl" />
+	<bean id="com.inkwell.internet.slogan.service.SloganLocalServiceUtil" class="com.inkwell.internet.slogan.service.SloganLocalServiceUtil">
+		<property name="service" ref="com.inkwell.internet.slogan.service.SloganLocalService" />
+	</bean>
+	<bean id="com.inkwell.internet.slogan.service.persistence.SloganPersistence" class="com.inkwell.internet.slogan.service.persistence.SloganPersistenceImpl" parent="basePersistence" />
+	<bean id="com.inkwell.internet.slogan.service.persistence.SloganFinder" class="com.inkwell.internet.slogan.service.persistence.SloganFinderImpl" parent="basePersistence" />
+</beans>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.inkwell.internet.productregistration.model.impl.PRProductModelImpl">
+		<attributes>
+			<id name="productId" />
+			<basic name="productName" />
+			<basic name="serialNumber" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<transient name="primaryKey" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.inkwell.internet.productregistration.model.impl.PRUserModelImpl">
+		<attributes>
+			<id name="prUserId" />
+			<basic name="firstName" />
+			<basic name="lastName" />
+			<basic name="address1" />
+			<basic name="address2" />
+			<basic name="city" />
+			<basic name="state" />
+			<basic name="postalCode" />
+			<basic name="country" />
+			<basic name="phoneNumber" />
+			<basic name="email" />
+			<basic name="birthDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="male" />
+			<basic name="userId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<transient name="prUserUuid" />
+			<transient name="primaryKey" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.inkwell.internet.productregistration.model.impl.PRRegistrationModelImpl">
+		<attributes>
+			<id name="registrationId" />
+			<basic name="prUserId" />
+			<basic name="datePurchased">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="howHear" />
+			<basic name="wherePurchased" />
+			<basic name="serialNumber" />
+			<basic name="productId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<transient name="prUserUuid" />
+			<transient name="primaryKey" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.inkwell.internet.productregistration.model.impl.PRProductImpl" name="PRProduct">
+		<table name="PR_PRProduct" />
+		<attributes />
+	</entity>
+	<entity class="com.inkwell.internet.productregistration.model.impl.PRUserImpl" name="PRUser">
+		<table name="PR_PRUser" />
+		<attributes>
+			<transient name="gender" />
+		</attributes>
+	</entity>
+	<entity class="com.inkwell.internet.productregistration.model.impl.PRRegistrationImpl" name="PRRegistration">
+		<table name="PR_PRRegistration" />
+		<attributes />
+	</entity>
+</entity-mappings>

@@ -1,0 +1,1 @@
+create index IX_3F05A1D on Inkwell_ShoppingCategoryImage (categoryId);

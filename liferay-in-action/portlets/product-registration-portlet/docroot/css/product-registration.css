@@ -1,0 +1,28 @@
+.ink-form-label  {
+    width: 50em;
+    float: left;
+    text-align: left;
+    margin-right: 0.5em;
+    display: block
+}
+
+.ink-button {
+    color: #000;
+    background: #ffa20f;
+    border: 2px outset #d7b9c9
+}
+
+.ink-fieldset {
+    border: 1px solid #781351;
+    width: 98%;
+    background: #ffcd67;
+    background-image: url(./images/bg-box-s1.gif);
+    background-repeat: repeat-x
+}
+
+.ink-legend {
+    color: #fff;
+    background: #ffa20c;
+    border: 1px solid #781351;
+    padding: 2px 6px
+}

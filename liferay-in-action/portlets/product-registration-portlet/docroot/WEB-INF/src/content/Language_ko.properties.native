@@ -1,0 +1,88 @@
+##
+## Messages
+##
+
+Product=제품
+com.inkwell.internet.portlets.prodreg.sb.model.Product=제품
+model.resource.com.inkwell.internet.portlets.prodreg.sb.model.Product=제품
+
+
+# Product Form Messages
+
+
+# Product Form Errors
+product-saved-successfully=성공적으로 저장되는 제품
+productDeleted=제품은 성공적으로 삭제되었다.
+productName=제품 이름
+productSerial=일련 번호 가면
+productUpdated=제품은 성공적으로 새롭게 했다.
+there-are-no-products=아직 표시할 것이다 아무 제품도 없다.
+
+
+# Registration Form Messages
+error-deleting=거기 가지고 있다 이 이 제품을 삭제하는 과실이.
+error-updating=거기 가지고 있다 이 이 제품을 새롭게 하는 과실이.
+fields-required=모든 분야를 기입하십시오
+product-name-required=제품 이름은 요구된다
+serial-number-prefix-required=일련 번호 접두어에 들어가십시오
+
+
+# Registration Form Errors
+add-registration=새로운 잉크병 제품을 등록하십시오
+address1=거리 주소 1
+address2=거리 주소 2
+catalog=카탈로그
+city=도시
+country=국가
+date-of-birth=생년월일
+date-purchased=날짜는 구매했다
+email-address=이메일 주소
+first-name=이름
+friend-family-member=친구/가족 구성원
+gender=성
+gift=선물
+home-shopping=자택 쇼핑
+how-hear=당신은 어떻게 이 잉크병 제품에 관하여 들렸는가?
+inkwell.com=inkwell.com
+last-name=성
+magazine-article=잡지 기사
+online-retailer=온라인 소매상인
+other-web-site=다른 웹사이트
+other=다른 사람
+phone-number=전화 번호
+please-choose=선택하십시오
+postal-code=Zip
+product-serial-number=제품 일련 번호
+product-type=제품 유형
+radio-advertisement=라디오 광고
+registration-saved-successfully=성공적으로 저장되는 등록
+retail-store=소매점
+state=국가
+thank-you-message=저희와 가진 당신의 제품 등록을 당신을 감사하십시오!
+trade-show=무역 박람회
+tv-advertisement=텔레비젼 광고
+tv-news=텔레비젼 뉴스
+tv-shopping-network=텔레비젼 쇼핑 네트워크
+where-purchase=당신은 어디에서 이 잉크병 제품을 구매했는가?
+
+
+# Registration View Messages
+address-required=주소는 요구했다
+birthdate-required=요구되는 생일
+date-purchased-required=당신이 제품을 구매한 날짜에 진입하십시오
+email-required=당신의 이메일 주소를 입력하십시오
+enter-valid-date=유효한 날짜에 진입하십시오
+error-saving-registration=과실 저축 등록
+firstname-required=이름은 요구했다
+gender-required=요구되는 성
+howhear-required=당신이 우리의 제품에 관하여 어떻게 들린지 저희에게 말하십시오
+lastname-required=성은 요구했다
+missing-company-id=Missing Company ID
+missing-group-id=없는 그룹 ID
+phone-number-required=요구되는 전화 번호
+product-type-required=당신이 구매한 제품의 유형에 들어가십시오
+serial-number-required=일련 번호는 요구했다
+where-purchased-required=당신이 제품을 어디에 구매하는지 저희에게 말하십시오
+
+display-registrations=전시 등록
+there-are-no-registrations=아무 등록도 없다

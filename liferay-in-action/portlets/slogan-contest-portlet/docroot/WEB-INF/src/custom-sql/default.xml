@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<custom-sql>
+
+  <sql id="com.inkwell.internet.slogan.service.persistence.SloganFinder.findByRatingsStats">
+    <![CDATA[
+        SELECT
+            RatingsStats.averageScore AS averageScore,
+            Slogan_Slogan.sloganId AS sloganId,
+            Slogan_Slogan.sloganText AS sloganText
+        FROM
+            RatingsStats, Slogan_Slogan
+        WHERE
+            (Slogan_Slogan.groupId = ?) AND
+            (Slogan_Slogan.status = ?) AND
+            (RatingsStats.classNameId = ?) AND
+            (Slogan_Slogan.sloganId = RatingsStats.classPK)
+        ORDER BY
+            RatingsStats.averageScore
+        DESC
+    ]]>
+  </sql>
+
+</custom-sql>

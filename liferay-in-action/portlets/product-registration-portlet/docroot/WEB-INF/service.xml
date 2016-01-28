@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_0_0.dtd">
+<service-builder package-path="com.inkwell.internet.productregistration">
+
+  <author>Rich Sezov</author>
+
+  <namespace>PR</namespace>
+
+  <entity name="PRProduct" local-service="true" remote-service="false">
+
+    <!-- PK Fields -->
+
+    <column name="productId" type="long" primary="true" />
+
+    <!-- Other Fields -->
+
+    <column name="productName" type="String" />
+    <column name="serialNumber" type="String" />
+
+    <!-- Foreign Keys -->
+
+    <column name="companyId" type="long" />
+    <column name="groupId" type="long" />
+
+    <!-- Order -->
+
+    <order by="asc">
+      <order-column name="productName" />
+    </order>
+
+    <!-- Finder Methods -->
+
+    <finder name="G_PN" return-type="Collection">
+      <finder-column name="groupId" />
+      <finder-column name="productName" />
+    </finder>
+
+    <finder name="GroupId" return-type="Collection">
+      <finder-column name="groupId" />
+    </finder>
+
+    <finder name="CompanyId" return-type="Collection">
+      <finder-column name="companyId" />
+    </finder>
+
+  </entity>
+
+  <entity name="PRUser" local-service="true" remote-service="false">
+
+    <!-- PK Fields -->
+
+    <column name="prUserId" type="long" primary="true" />
+
+    <!-- Other Fields -->
+
+    <column name="firstName" type="String" />
+    <column name="lastName" type="String" />
+    <column name="address1" type="String" />
+    <column name="address2" type="String" />
+    <column name="city" type="String" />
+    <column name="state" type="String" />
+    <column name="postalCode" type="String" />
+    <column name="country" type="String" />
+    <column name="phoneNumber" type="String" />
+    <column name="email" type="String" />
+    <column name="birthDate" type="Date" />
+    <column name="male" type="boolean" />
+
+    <!-- Foreign Keys -->
+
+    <column name="userId" type="long" />
+    <column name="companyId" type="long" />
+    <column name="groupId" type="long" />
+
+    <!-- Relationships -->
+
+    <column name="userRegistrations" type="Collection" entity="PRRegistration" mapping-key="prUserId" />
+
+    <!-- Order -->
+
+    <order by="asc">
+      <order-column name="lastName" case-sensitive="false" />
+    </order>
+
+    <!-- Finder Methods -->
+
+    <finder name="G_LN" return-type="Collection">
+      <finder-column name="groupId" />
+      <finder-column name="lastName" />
+    </finder>
+
+    <finder name="G_E" return-type="Collection">
+      <finder-column name="groupId" />
+      <finder-column name="email" />
+    </finder>
+
+    <finder name="G_U" return-type="Collection">
+      <finder-column name="groupId" />
+      <finder-column name="userId" />
+    </finder>
+
+  </entity>
+
+  <entity name="PRRegistration" local-service="true" remote-service="false">
+
+    <!-- PK Fields -->
+
+    <column name="registrationId" type="long" primary="true" />
+
+    <!-- Other Fields -->
+
+    <column name="prUserId" type="long" />
+    <column name="datePurchased" type="Date" />
+    <column name="howHear" type="String" />
+    <column name="wherePurchased" type="String" />
+    <column name="serialNumber" type="String" />
+    <column name="productId" type="long" />
+    <column name="companyId" type="long" />
+    <column name="groupId" type="long" />
+
+    <!-- Finders -->
+
+    <finder name="GroupId" return-type="Collection">
+      <finder-column name="groupId" />
+    </finder>
+
+    <finder name="G_RU" return-type="Collection">
+      <finder-column name="groupId" />
+      <finder-column name="prUserId" />
+    </finder>
+
+    <finder name="G_DP" return-type="Collection">
+      <finder-column name="groupId" />
+      <finder-column name="datePurchased" />
+    </finder>
+
+    <finder name="G_SN" return-type="Collection">
+      <finder-column name="groupId" />
+      <finder-column name="serialNumber" />
+    </finder>
+
+    <!--  References -->
+
+    <reference package-path="com.liferay.portlet.social" entity="SocialActivity" />
+    <reference package-path="com.liferay.portal" entity="User" />
+
+  </entity>
+
+</service-builder>

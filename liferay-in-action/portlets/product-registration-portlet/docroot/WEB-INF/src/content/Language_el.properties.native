@@ -1,0 +1,88 @@
+##
+## Messages
+##
+
+Product=Προϊόν
+com.inkwell.internet.portlets.prodreg.sb.model.Product=Προϊόν
+model.resource.com.inkwell.internet.portlets.prodreg.sb.model.Product=Προϊόν
+
+
+# Product Form Messages
+
+
+# Product Form Errors
+product-saved-successfully=Προϊόν σωζόμενο επιτυχώς
+productDeleted=Το προϊόν έχει διαγραφεί επιτυχώς.
+productName=Όνομα προϊόντων
+productSerial=Μάσκα αύξοντος αριθμού
+productUpdated=Το προϊόν ενημερώθηκε επιτυχώς.
+there-are-no-products=Δεν υπάρχει κανένα προϊόν ακόμα στην επίδειξη.
+
+
+# Registration Form Messages
+error-deleting=Έχει υπάρξει ένα λάθος διαγράφοντας αυτό το προϊόν.
+error-updating=Έχει υπάρξει ένα λάθος ενημερώνοντας αυτό το προϊόν.
+fields-required=Παρακαλώ συμπληρώστε όλους τους τομείς
+product-name-required=Το όνομα προϊόντων απαιτείται
+serial-number-prefix-required=Παρακαλώ εισάγετε το πρόθεμα αύξοντος αριθμού
+
+
+# Registration Form Errors
+add-registration=Καταχωρήστε ένα νέο προϊόν Inkwell
+address1=Διεύθυνση οδών 1
+address2=Διεύθυνση οδών 2
+catalog=Κατάλογος
+city=Πόλη
+country=Χώρα
+date-of-birth=Ημερομηνία γέννησης
+date-purchased=Ημερομηνία που αγοράζεται
+email-address=Διεύθυνση ηλεκτρονικού ταχυδρομείου
+first-name=Όνομα
+friend-family-member=Μέλος φίλων/οικογένειας
+gender=Γένος
+gift=Δώρο
+home-shopping=Εγχώριες αγορές
+how-hear=Πώς ακούσατε για αυτό το προϊόν Inkwell;
+inkwell.com=inkwell.com
+last-name=Επώνυμο
+magazine-article=Άρθρο περιοδικών
+online-retailer=Σε απευθείας σύνδεση λιανοπωλητής
+other-web-site=Άλλος ιστοχώρος
+other=Άλλος
+phone-number=Αριθμός τηλεφώνου
+please-choose=Παρακαλώ επιλέξτε
+postal-code=Φερμουάρ
+product-serial-number=Αύξων αριθμός προϊόντων
+product-type=Τύπος προϊόντων
+radio-advertisement=Ραδιο διαφήμιση
+registration-saved-successfully=Εγγραφή σωζόμενη επιτυχώς
+retail-store=Μαγαζί λιανικής πώλησης
+state=Κράτος
+thank-you-message=Σας ευχαριστώ για την καταχώρηση του προϊόντος σας με μας!
+trade-show=Εμπορική έκθεση
+tv-advertisement=Διαφήμιση TV
+tv-news=Ειδήσεις TV
+tv-shopping-network=Δίκτυο αγορών TV
+where-purchase=Πού αγοράσατε αυτό το προϊόν Inkwell;
+
+
+# Registration View Messages
+address-required=Διεύθυνση που απαιτείται
+birthdate-required=Ημερομηνία γέννησης που απαιτείται
+date-purchased-required=Παρακαλώ εισάγετε την ημερομηνία που αγοράσατε το προϊόν
+email-required=Παρακαλώ εισάγετε τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας
+enter-valid-date=Εισάγετε μια έγκυρη ημερομηνία
+error-saving-registration=Εγγραφή αποταμίευσης λάθους
+firstname-required=Όνομα που απαιτείται
+gender-required=Γένος που απαιτείται
+howhear-required=Παρακαλώ μας πέστε πώς ακούσατε για το προϊόν μας
+lastname-required=Επώνυμο που απαιτείται
+missing-company-id=Ελλείπουσα ταυτότητα επιχείρησης
+missing-group-id=Ελλείπουσα ταυτότητα ομάδας
+phone-number-required=Αριθμός τηλεφώνου που απαιτείται
+product-type-required=Παρακαλώ εισάγετε τον τύπο προϊόντος που αγοράσατε
+serial-number-required=Αύξων αριθμός που απαιτείται
+where-purchased-required=Παρακαλώ μας πέστε όπου αγοράσατε το προϊόν
+
+display-registrations=Εγγραφές επίδειξης
+there-are-no-registrations=Δεν υπάρχει καμία εγγραφή

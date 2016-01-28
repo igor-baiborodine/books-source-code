@@ -1,0 +1,341 @@
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+/* ---------- Base ---------- */
+
+body {
+	background: #7C6F5C url(../images/custom/body_bg.jpg);
+	color: #222;
+}
+
+/* ---------- Wrapper ---------- */
+
+#wrapper {
+	margin: 0 auto;
+	width: 972px;
+}
+
+/* ---------- Banner ---------- */
+
+#banner {
+	margin: 9px 0;
+}
+
+#right-side-banner {
+	float: right;
+}
+
+/* ---------- Navigation ---------- */
+
+#navigation {
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	background: url(../images/custom/navigation_bg.jpg);
+	border: 3px solid #221;
+}
+
+#navigation:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+* html #navigation {
+	height: 1%;
+}
+
+*+html #navigation {
+	height: 1%;
+}
+
+#navigation ul,
+#add-page {
+	float: left;
+	list-style: none;
+}
+
+#navigation ul {
+	margin-left: 1em;
+}
+
+#navigation li, #navigation a {
+	display: inline-block;
+}
+
+#navigation li { 
+	list-style: none;
+}
+
+#navigation a,
+#navigation .enter-page {
+	text-shadow: 0 0 9px #000;
+	color: #EEC;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 1em;
+	text-decoration: none;
+}
+
+#navigation .cancel-page,
+#navigation .save-page {
+	display: none;
+}
+
+/* ---------- Content Wrapper ---------- */
+
+#content {
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	margin-top: -10px;
+	background: #B09E82;
+	background: url(../images/custom/content-wrapper_bg.jpg);
+	border: 3px solid #221;
+	border-top: 0;
+	padding: 32px 32px 16px;
+}
+
+/* ---------- Portlet ---------- */
+
+.portlet {
+	margin: 0 0 32px;
+}
+
+.portlet-topper {
+	background: url(../images/custom/portlet-topper_bg.png) no-repeat right top;
+	padding: 0 31px 0 0;
+}
+
+.portlet-topper-toolbar {
+	margin: 0.5em 3em;
+}
+
+.portlet-title {
+	-moz-border-radius-topleft: 3px;
+	background: #FCFBF2;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: 38px;
+	line-height: 38px;
+}
+
+.portlet-title img {
+	margin-left: 1em;
+	vertical-align: middle;
+}
+
+.portlet-content {
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+	background: #FCFBF2;
+}
+
+/* --Experimenting-this comes from custom_common.css --------- */
+
+/* ---------- Breadcrumbs ---------- */
+
+.breadcrumbs {
+	margin-bottom: 1.5em;
+}
+
+.breadcrumbs li {
+	background: url(../images/arrows/05_right.png) no-repeat 100% 50%;
+	display: inline;
+	margin-right: 5px;
+	padding-right: 15px;
+}
+
+.breadcrumbs .last, .aui-tree-node-selected {
+	background-image: none;
+	margin-top: 0.2em;
+}
+
+.breadcrumbs .last a, .aui-tree-node-selected a {
+	color: #555;
+}
+
+/* ---------- Site breadcrumbs ---------- */
+
+.site-breadcrumbs {
+	margin: 0 0 5px;
+	width: auto;
+}
+
+.site-breadcrumbs ul {
+	background-color: #FFF;
+	border: 1px solid #DEDEDE;
+	border-color: #C0C2C5;
+	height: 1.8em;
+	margin: 0;
+}
+
+.site-breadcrumbs li {
+	background-image: none;
+	float: left;
+	line-height: 1.8em;
+	margin-right: 0;
+	padding-left: 0.75em;
+	padding-right: 0;
+}
+
+.site-breadcrumbs li span {
+	background: url(../images/common/breadcrumbs.png) no-repeat 100% 50%;
+	display: block;
+	line-height: 1.8em;
+	padding: 0 15px 0 0;
+}
+
+.site-breadcrumbs li span a {
+	text-decoration: none;
+}
+
+.site-breadcrumbs li.first a {
+	color: #369;
+	font-weight: bold;
+}
+
+.site-breadcrumbs li.last a {
+	color: #4B5567;
+	font-size: 1.3em;
+}
+
+.site-breadcrumbs .last {
+	display: inline;
+	font-size: 1em;
+	margin-top: 0;
+	padding-right: 0;
+}
+
+.site-breadcrumbs .last span {
+	background-image: none;
+	padding: 0;
+}
+
+/* ---------- Hidden Accessible ---------- */
+
+#skip-to-content, #banner h2, #banner h3, #navigation h1, .site-breadcrumbs h1 {
+	left: -99999px;
+	overflow: hidden;
+	position: absolute;
+	width: 1%;
+}
+
+/* ---------- Extras ---------- */
+
+.aui-tab-active:after {
+	border: 10px solid;
+	border-bottom-width: 0;
+	border-color: #333 transparent transparent;
+	bottom: -7px;
+	content: '-';
+	display: block;
+	height: 0;
+	left: 50%;
+	margin-left: -10px;
+	position: absolute;
+	text-indent: -9999px;
+	width: 0;
+	z-index: 20;
+}
+
+/* -------- Inkwell-specific Styles -------- */
+
+#pen-menu-container {
+	 background-image: url(../images/custom/menu_bar.png);
+	background-repeat: repeat-x;
+
+}
+
+#pen-menu {
+	
+	overflow: hidden;
+	width: 700px ;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+
+#pen-menu ul {
+	margin: 6px 0 1em 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	line-height: 1;
+	text-align: center;
+}
+
+#pen-menu a {
+	display: block;
+	margin: 0px;
+	color: black;
+	padding: 5px 10px; 
+	text-decoration: none;
+	text-align: center;
+}
+
+#pen-menu li {
+	font-family: 'Helvetica', 'Luxi Sans', 'Lucida Sans Unicode', sans-serif;
+	font-size: .85em;
+	font-weight: bold;
+	letter-spacing: 2px;
+	list-style: none;
+	float: left;
+	width: 15em;
+	padding: 0;
+}
+
+#pen-menu li ul {
+	position: absolute;
+	width: 15em;
+	left: -999em;
+}
+
+#pen-menu li li {
+	padding-right: 1em;
+	/*width: 15em;*/
+}
+
+#pen-menu li ul a {
+	width: 15em;
+}
+
+#pen-menu li ul ul {
+	margin: -1.75em 0 0 14em;
+}
+
+#pen-menu li:hover ul ul,#pen-menu li:hover ul ul ul,#pen-menu li.sfhover ul ul,#pen-menu li.sfhover ul ul ul
+	{
+	left: -999em;
+}
+
+#pen-menu li:hover ul,#pen-menu li li:hover ul,#pen-menu li li li:hover ul,#pen-menu li.sfhover ul,#pen-menu li li.sfhover ul,#pen-menu li li li.sfhover ul
+	{
+	left: auto;
+}
+
+#pen-menu li:hover,#pen-menu li.sfhover {
+	color: #E11E1E;
+}
+
+#pen-menu li a:hover {
+	color: #E11E1E;
+}
+
+#pen-container {
+	background-color: #FFFFFF;
+	position: relative;
+}
+
+#shopping-image {
+	background-image: url(../images/custom/INKWELL_logo_V3.png);
+	background-color: #D8EBFB;
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 248px;
+	margin-left: auto;
+	margin-right: auto;
+}

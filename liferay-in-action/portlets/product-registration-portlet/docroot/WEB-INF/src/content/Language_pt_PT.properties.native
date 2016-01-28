@@ -1,0 +1,88 @@
+##
+## Messages
+##
+
+Product=Produto
+com.inkwell.internet.portlets.prodreg.sb.model.Product=Produto
+model.resource.com.inkwell.internet.portlets.prodreg.sb.model.Product=Produto
+
+
+# Product Form Messages
+
+
+# Product Form Errors
+product-saved-successfully=O produto conservou com sucesso
+productDeleted=O produto foi suprimido com sucesso.
+productName=Nome de produto
+productSerial=Máscara do número de série
+productUpdated=O produto era actualizado com sucesso.
+there-are-no-products=Não há nenhum produto a indicar ainda.
+
+
+# Registration Form Messages
+error-deleting=Tem estado um erro que suprime deste produto.
+error-updating=Tem estado um erro que actualiza este produto.
+fields-required=Complete por favor todos os campos
+product-name-required=O nome de produto é exigido
+serial-number-prefix-required=Incorpore por favor o prefixo do número de série
+
+
+# Registration Form Errors
+add-registration=Registe um produto novo do Inkwell
+address1=Endereço de rua 1
+address2=Endereço de rua 2
+catalog=Catálogo
+city=Cidade
+country=País
+date-of-birth=Data de nascimento
+date-purchased=A data comprou
+email-address=Email address
+first-name=Nome
+friend-family-member=Amigo/membro da família
+gender=Género
+gift=Presente
+home-shopping=Compra Home
+how-hear=Como você se ouviu sobre este produto do Inkwell?
+inkwell.com=inkwell.com
+last-name=Apelido
+magazine-article=Artigo de compartimento
+online-retailer=Varejista em linha
+other-web-site=O outro Web site
+other=Outro
+phone-number=Número de telefone
+please-choose=Escolha por favor
+postal-code=Fecho de correr
+product-serial-number=Número de série do produto
+product-type=Tipo de produto
+radio-advertisement=Propaganda de rádio
+registration-saved-successfully=O registo conservou com sucesso
+retail-store=Loja
+state=Estado
+thank-you-message=Obrigado registando seu produto connosco!
+trade-show=Feira profissional
+tv-advertisement=Propaganda da tevê
+tv-news=Notícia da tevê
+tv-shopping-network=Rede da compra da tevê
+where-purchase=Onde você comprou este produto do Inkwell?
+
+
+# Registration View Messages
+address-required=Endereço exigido
+birthdate-required=A data de nascimento exigiu
+date-purchased-required=Incorpore por favor a data onde você comprou o produto
+email-required=Incorpore por favor seu email address
+enter-valid-date=Incorpore uma data válida
+error-saving-registration=Registo da economia do erro
+firstname-required=Nome exigido
+gender-required=Género exigido
+howhear-required=Diga-nos por favor como você se ouviu sobre nosso produto
+lastname-required=Apelido exigido
+missing-company-id=Identificação de Faltante Companhia
+missing-group-id=Identificação de grupo faltante
+phone-number-required=Número de telefone exigido
+product-type-required=Incorpore por favor o tipo de produto que você comprou
+serial-number-required=O número de série exigiu
+where-purchased-required=Diga-nos por favor onde você comprou o produto
+
+display-registrations=Registos da exposição
+there-are-no-registrations=Não há nenhum registo

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource-action-mapping>
+
+	<portlet-resource>
+		<portlet-name>slogan-contest</portlet-name>
+		<permissions>
+			<supports>
+				<action-key>ADD_SLOGAN</action-key>
+				<action-key>VIEW</action-key>
+			</supports>
+			<community-defaults>
+				<action-key>VIEW</action-key>
+			</community-defaults>
+			<guest-defaults>
+				<action-key>VIEW</action-key>
+			</guest-defaults>
+
+			<guest-unsupported>
+				<action-key>ADD_SLOGAN</action-key>
+			</guest-unsupported>
+		</permissions>
+	</portlet-resource>
+
+	<model-resource>
+		<model-name>com.inkwell.internet.slogan.model.Slogan</model-name>
+		<portlet-ref>
+			<portlet-name>slogan-contest</portlet-name>
+		</portlet-ref>
+		<permissions>
+			<supports>
+				<action-key>DELETE</action-key>
+				<action-key>PERMISSIONS</action-key>
+				<action-key>UPDATE</action-key>
+				<action-key>VIEW</action-key>
+			</supports>
+			<community-defaults>
+				<action-key>VIEW</action-key>
+			</community-defaults>
+			<guest-defaults>
+				<action-key>VIEW</action-key>
+			</guest-defaults>
+			<guest-unsupported>
+				<action-key>UPDATE</action-key>
+			</guest-unsupported>
+		</permissions>
+	</model-resource>
+
+</resource-action-mapping>

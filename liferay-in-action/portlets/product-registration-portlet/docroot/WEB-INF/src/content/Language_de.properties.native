@@ -1,0 +1,88 @@
+##
+## Messages
+##
+
+Product=Produkt
+com.inkwell.internet.portlets.prodreg.sb.model.Product=Produkt
+model.resource.com.inkwell.internet.portlets.prodreg.sb.model.Product=Produkt
+
+
+# Product Form Messages
+
+
+# Product Form Errors
+product-saved-successfully=Produkt speicherte erfolgreich
+productDeleted=Das Produkt ist erfolgreich gelöscht worden.
+productName=Produkt-Name
+productSerial=Seriennummer-Schablone
+productUpdated=Das Produkt wurde erfolgreich aktualisiert.
+there-are-no-products=Es gibt keine schon anzuzeigen Produkte.
+
+
+# Registration Form Messages
+error-deleting=Hat gewesen eine Störung, die dieses Produkt löscht.
+error-updating=Hat gewesen eine Störung, die dieses Produkt aktualisiert.
+fields-required=Ergänzen Sie bitte alle Felder
+product-name-required=Produkt-Name wird angefordert
+serial-number-prefix-required=Tragen Sie bitte das Seriennummerpräfix ein
+
+
+# Registration Form Errors
+add-registration=Registrieren Sie ein neues Tintenfass-Produkt
+address1=Straßen-Adresse 1
+address2=Straßen-Adresse 2
+catalog=Katalog
+city=Stadt
+country=Land
+date-of-birth=Geburtsdatum
+date-purchased=Datum kaufte
+email-address=Email address
+first-name=Vorname
+friend-family-member=Freund/Familienmitglied
+gender=Geschlecht
+gift=Geschenk
+home-shopping=Home-Shopping
+how-hear=Wie hörten Sie über dieses Tintenfaßprodukt?
+inkwell.com=inkwell.com
+last-name=Nachname
+magazine-article=Zeitschriften-Artikel
+online-retailer=On-line-Einzelhändler
+other-web-site=Andere Web site
+other=Anderes
+phone-number=Telefonnummer
+please-choose=Wählen Sie bitte
+postal-code=Reißverschluss
+product-serial-number=Produkt-Seriennummer
+product-type=Produkt-Art
+radio-advertisement=Radioreklameanzeige
+registration-saved-successfully=Ausrichtung erfolgreich gespeichert
+retail-store=Einzelhandelsgeschäft
+state=Zustand
+thank-you-message=Danke für das Registrieren Ihres Produktes mit uns!
+trade-show=Messe
+tv-advertisement=Fernsehreklameanzeige
+tv-news=Fernsehnachrichten
+tv-shopping-network=Fernseheinkaufen-Netz
+where-purchase=Wo kauften Sie dieses Tintenfaßprodukt?
+
+
+# Registration View Messages
+address-required=Adresse erfordert
+birthdate-required=Geburts-Datum erfordert
+date-purchased-required=Erreichen Sie bitte das Datum, das Sie das Produkt kauften
+email-required=Tragen Sie bitte Ihr email address ein
+enter-valid-date=Erreichen Sie ein gültiges Datum
+error-saving-registration=Störungs-Einsparung-Ausrichtung
+firstname-required=Vorname erfordert
+gender-required=Geschlecht erforderte
+howhear-required=Erklären Sie uns, wie bitte Sie über unser Produkt hörten
+lastname-required=Nachname erfordert
+missing-company-id=Missing Company Identifikation
+missing-group-id=Fehlende Gruppennummer
+phone-number-required=Telefonnummer erfordert
+product-type-required=Tragen Sie bitte die Art des Produktes ein, das Sie kauften
+serial-number-required=Seriennummer erfordert
+where-purchased-required=Erklären Sie uns, wo bitte Sie das Produkt kauften
+
+display-registrations=Anzeigen-Ausrichtungen
+there-are-no-registrations=Es gibt keine Ausrichtungen

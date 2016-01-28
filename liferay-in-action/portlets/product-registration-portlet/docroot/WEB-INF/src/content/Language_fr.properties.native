@@ -1,0 +1,88 @@
+##
+## Messages
+##
+
+Product=Produit
+com.inkwell.internet.portlets.prodreg.sb.model.Product=Produit
+model.resource.com.inkwell.internet.portlets.prodreg.sb.model.Product=Produit
+
+
+# Product Form Messages
+
+
+# Product Form Errors
+product-saved-successfully=Le produit a économisé avec succès
+productDeleted=Le produit a été supprimé avec succès.
+productName=Nom de produit
+productSerial=Masque de numéro de série
+productUpdated=Le produit a été mis à jour avec succès.
+there-are-no-products=Il n'y a aucun produit à montrer encore.
+
+
+# Registration Form Messages
+error-deleting=Là a été une erreur supprimant ce produit.
+error-updating=Là a été une erreur mettant à jour ce produit.
+fields-required=Veuillez compléter tous les champs
+product-name-required=Le nom de produit est exigé
+serial-number-prefix-required=Veuillez écrire le préfixe de numéro de série
+
+
+# Registration Form Errors
+add-registration=Enregistrez un nouveau produit d'encrier encastré
+address1=Adresse de rue 1
+address2=Adresse de rue 2
+catalog=Catalogue
+city=Ville
+country=Pays
+date-of-birth=Date de naissance
+date-purchased=La date a acheté
+email-address=Email address
+first-name=Prénom
+friend-family-member=Ami/membre de la famille
+gender=Genre
+gift=Cadeau
+home-shopping=Achats à la maison
+how-hear=Comment avez-vous entendu parler de ce produit d'encrier encastré ?
+inkwell.com=inkwell.com
+last-name=Nom de famille
+magazine-article=Article de magazine
+online-retailer=Détaillant en ligne
+other-web-site=L'autre site Web
+other=Autre
+phone-number=Numéro de téléphone
+please-choose=Choisissez svp
+postal-code=Fermeture éclair
+product-serial-number=Numéro de série de produit
+product-type=Type de produit
+radio-advertisement=Publicité par radio
+registration-saved-successfully=Enregistrement sauvé avec succès
+retail-store=Magasin de détail
+state=État
+thank-you-message=Merci d'enregistrer votre produit avec nous !
+trade-show=Exposition commerciale commerciale
+tv-advertisement=Publicité de TV
+tv-news=Nouvelles de TV
+tv-shopping-network=Réseau d'achats de TV
+where-purchase=Où avez-vous acheté ce produit d'encrier encastré ?
+
+
+# Registration View Messages
+address-required=Adresse requise
+birthdate-required=La date de naissance a exigé
+date-purchased-required=Veuillez écrire la date où vous avez acheté le produit
+email-required=Veuillez écrire votre email address
+enter-valid-date=Écrivez une date valide
+error-saving-registration=Enregistrement d'économie d'erreur
+firstname-required=Le prénom a exigé
+gender-required=Genre requis
+howhear-required=Veuillez nous dire que vous avez entendu parler de notre produit
+lastname-required=Le nom de famille a exigé
+missing-company-id=Identification de Missing Company
+missing-group-id=Identification du groupe absente
+phone-number-required=Le numéro de téléphone a exigé
+product-type-required=Veuillez écrire le type de produit que vous avez acheté
+serial-number-required=Numéro de série requis
+where-purchased-required=Veuillez nous dire où vous avez acheté le produit
+
+display-registrations=Enregistrements d'affichage
+there-are-no-registrations=Il n'y a aucun enregistrement

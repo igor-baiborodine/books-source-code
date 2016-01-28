@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model-hints>
+	<model name="com.inkwell.internet.portlets.prodreg.sb.model.Product">
+		<field name="productId" type="long" />
+		<field name="productName" type="String" />
+		<field name="serialNumber" type="String" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+	</model>
+	<model name="com.inkwell.internet.portlets.prodreg.sb.model.RegUser">
+		<field name="regUserId" type="long" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="address1" type="String" />
+		<field name="address2" type="String" />
+		<field name="city" type="String" />
+		<field name="state" type="String" />
+		<field name="postalCode" type="String" />
+		<field name="country" type="String" />
+		<field name="phoneNumber" type="String" />
+		<field name="email" type="String" />
+		<field name="birthDate" type="Date">
+			<hint name="year-range-delta">70</hint>
+			<hint name="year-range-future">false</hint>
+			<hint name="show-time">false</hint>
+		</field>
+		<field name="male" type="boolean" />
+		<field name="userId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+	</model>
+	<model name="com.inkwell.internet.portlets.prodreg.sb.model.Registration">
+		<field name="regId" type="long" />
+		<field name="regUserId" type="long" />
+		<field name="datePurchased" type="Date">
+			<hint name="show-time">false</hint>
+		</field>
+		<field name="howHear" type="String" />
+		<field name="wherePurchased" type="String" />
+		<field name="serialNumber" type="String" />
+		<field name="productId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+	</model>
+	<model name="com.inkwell.internet.productregistration.model.PRProduct">
+		<field name="productId" type="long" />
+		<field name="productName" type="String" />
+		<field name="serialNumber" type="String" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+	</model>
+	<model name="com.inkwell.internet.productregistration.model.PRUser">
+		<field name="prUserId" type="long" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="address1" type="String" />
+		<field name="address2" type="String" />
+		<field name="city" type="String" />
+		<field name="state" type="String" />
+		<field name="postalCode" type="String" />
+		<field name="country" type="String" />
+		<field name="phoneNumber" type="String" />
+		<field name="email" type="String" />
+		<field name="birthDate" type="Date" />
+		<field name="male" type="boolean" />
+		<field name="userId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+	</model>
+	<model name="com.inkwell.internet.productregistration.model.PRRegistration">
+		<field name="registrationId" type="long" />
+		<field name="prUserId" type="long" />
+		<field name="datePurchased" type="Date" />
+		<field name="howHear" type="String" />
+		<field name="wherePurchased" type="String" />
+		<field name="serialNumber" type="String" />
+		<field name="productId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+	</model>
+</model-hints>

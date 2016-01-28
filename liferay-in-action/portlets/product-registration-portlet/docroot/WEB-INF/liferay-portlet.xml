@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.0.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_0_0.dtd">
+
+<liferay-portlet-app>
+  <portlet>
+    <portlet-name>product-registration</portlet-name>
+    <icon>/icon.png</icon>
+    <social-activity-interpreter-class>com.inkwell.internet.productregistration.social.RegistrationActivityInterpreter</social-activity-interpreter-class>
+    <instanceable>false</instanceable>
+    <header-portlet-css>/css/product-registration.css</header-portlet-css>
+    <header-portlet-javascript>/js/test.js</header-portlet-javascript>
+  </portlet>
+
+  <portlet>
+    <portlet-name>product-admin</portlet-name>
+    <icon>/icon.png</icon>
+    <control-panel-entry-category>content</control-panel-entry-category>
+    <control-panel-entry-weight>1.5</control-panel-entry-weight>
+    <header-portlet-css>/css/product-admin.css</header-portlet-css>
+    <header-portlet-javascript>/js/test.js</header-portlet-javascript>
+  </portlet>
+
+  <role-mapper>
+    <role-name>administrator</role-name>
+    <role-link>Administrator</role-link>
+  </role-mapper>
+  <role-mapper>
+    <role-name>guest</role-name>
+    <role-link>Guest</role-link>
+  </role-mapper>
+  <role-mapper>
+    <role-name>power-user</role-name>
+    <role-link>Power User</role-link>
+  </role-mapper>
+  <role-mapper>
+    <role-name>user</role-name>
+    <role-link>User</role-link>
+  </role-mapper>
+</liferay-portlet-app>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 6.0.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_6_0_0.dtd">
+
+<routes>
+
+  <route>
+    <pattern>/{resourcePrimKey:\d+}/edit</pattern>
+    <implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
+    <implicit-parameter name="jspPage">/html/edit_slogan.jsp</implicit-parameter>
+  </route>
+
+  <route>
+    <pattern>/add</pattern>
+    <implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
+    <implicit-parameter name="jspPage">/html/edit_slogan.jsp</implicit-parameter>
+  </route>
+
+  <route>
+    <pattern>/{resourcePrimKey:\d+}/view</pattern>
+    <implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
+    <implicit-parameter name="p_p_state">maximized</implicit-parameter>
+    <implicit-parameter name="jspPage">/html/view_slogan.jsp</implicit-parameter>
+  </route>
+
+</routes>

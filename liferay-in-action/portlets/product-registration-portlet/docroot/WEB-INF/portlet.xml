@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+  version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+  <portlet>
+    <portlet-name>product-registration</portlet-name>
+    <display-name>Product Registration</display-name>
+    <portlet-class>com.inkwell.internet.productregistration.registration.portlet.ProductRegistrationPortlet</portlet-class>
+    <init-param>
+      <name>view-jsp</name>
+      <value>/registration/view.jsp</value>
+    </init-param>
+    <init-param>
+      <name>add-process-action-success-action</name>
+      <value>false</value>
+    </init-param>
+    <expiration-cache>0</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+    </supports>
+    <resource-bundle>content.Language</resource-bundle>
+    <portlet-info>
+      <title>Product Registration</title>
+      <short-title>Product Registration</short-title>
+      <keywords>Product Registration</keywords>
+    </portlet-info>
+    <security-role-ref>
+      <role-name>administrator</role-name>
+    </security-role-ref>
+    <security-role-ref>
+      <role-name>guest</role-name>
+    </security-role-ref>
+    <security-role-ref>
+      <role-name>power-user</role-name>
+    </security-role-ref>
+    <security-role-ref>
+      <role-name>user</role-name>
+    </security-role-ref>
+  </portlet>
+
+  <portlet>
+    <portlet-name>product-admin</portlet-name>
+    <display-name>Product Administration</display-name>
+    <portlet-class>com.inkwell.internet.productregistration.registration.portlet.ProductAdminPortlet</portlet-class>
+    <init-param>
+      <name>view-jsp</name>
+      <value>/admin/view.jsp</value>
+    </init-param>
+    <init-param>
+      <name>add-process-action-success-action</name>
+      <value>false</value>
+    </init-param>
+    <expiration-cache>0</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+    </supports>
+    <resource-bundle>content.Language</resource-bundle>
+    <portlet-info>
+      <title>Product Administration</title>
+      <short-title>Product Administration</short-title>
+      <keywords>Product Administration</keywords>
+    </portlet-info>
+    <security-role-ref>
+      <role-name>administrator</role-name>
+    </security-role-ref>
+    <security-role-ref>
+      <role-name>guest</role-name>
+    </security-role-ref>
+    <security-role-ref>
+      <role-name>power-user</role-name>
+    </security-role-ref>
+    <security-role-ref>
+      <role-name>user</role-name>
+    </security-role-ref>
+  </portlet>
+
+</portlet-app>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.inkwell.internet.productregistration.model.PRProduct" />
+	<import class="com.inkwell.internet.productregistration.model.PRUser" />
+	<import class="com.inkwell.internet.productregistration.model.PRRegistration" />
+	<class name="com.inkwell.internet.productregistration.model.impl.PRProductImpl" table="PR_PRProduct">
+		<cache usage="read-write" />
+		<id name="productId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="productName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="serialNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.inkwell.internet.productregistration.model.impl.PRUserImpl" table="PR_PRUser">
+		<cache usage="read-write" />
+		<id name="prUserId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="city" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="state" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="postalCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="country" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phoneNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="birthDate" type="org.hibernate.type.TimestampType" />
+		<property name="male" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.inkwell.internet.productregistration.model.impl.PRRegistrationImpl" table="PR_PRRegistration">
+		<cache usage="read-write" />
+		<id name="registrationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="prUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="datePurchased" type="org.hibernate.type.TimestampType" />
+		<property name="howHear" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="wherePurchased" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="serialNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

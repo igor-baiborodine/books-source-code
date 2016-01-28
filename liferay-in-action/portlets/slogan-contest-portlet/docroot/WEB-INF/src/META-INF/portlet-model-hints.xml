@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model-hints>
+	<model name="com.inkwell.internet.slogan.model.Slogan">
+		<field name="uuid" type="String" />
+		<field name="sloganId" type="long" />
+		<field name="sloganDate" type="Date" />
+		<field name="sloganText" type="String" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+	</model>
+</model-hints>
