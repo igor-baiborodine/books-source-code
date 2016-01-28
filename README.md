@@ -8,3 +8,4 @@ books-source-code
 * [Learnig Spring Boot](http://www.amazon.com/Learning-Spring-Boot-Greg-Turnquist/dp/1784393029/ref=sr_1_1?ie=UTF8&qid=1434333637&sr=8-1&keywords=learning+spring+boot)
 * [Vaadin 7 Cookbook](http://www.amazon.com/Vaadin-7-Cookbook-Jaroslav-Holan-ebook/dp/B00BKZHDK4/ref=sr_1_1?s=books&ie=UTF8&qid=1434333687&sr=1-1&keywords=vaadin+7+cookbook)
 * [Portlets in Action](http://www.amazon.com/Portlets-Action-Ashish-Sarin/dp/1935182544/ref=sr_1_1?ie=UTF8&qid=1453471284&sr=8-1&keywords=portlets+in+action)
+* [Liferay in Action](http://www.amazon.com/Liferay-Action-Official-Portal-Development/dp/193518282X/ref=sr_1_1?ie=UTF8&qid=1453994651&sr=8-1&keywords=liferay+in+Action)
