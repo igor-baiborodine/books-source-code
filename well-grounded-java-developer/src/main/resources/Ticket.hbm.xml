@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.java7developer.chapter11.listing_11_19.Ticket">
+
+    <id name="ticketId"
+        type="long"
+        column="ID" />
+
+    <property name="faceValue"
+              type="java.math.BigDecimal"
+              column="FACE_VALUE"
+              not-null="false" />
+
+    <property name="discountRate"
+              type="java.math.BigDecimal"
+              column="DISCOUNT_RATE"
+              not-null="true" />
+    
+  </class>
+</hibernate-mapping>
