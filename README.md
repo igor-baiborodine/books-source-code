@@ -10,3 +10,4 @@ books-source-code
 * [Portlets in Action](http://www.amazon.com/Portlets-Action-Ashish-Sarin/dp/1935182544/ref=sr_1_1?ie=UTF8&qid=1453471284&sr=8-1&keywords=portlets+in+action)
 * [Liferay in Action](http://www.amazon.com/Liferay-Action-Official-Portal-Development/dp/193518282X/ref=sr_1_1?ie=UTF8&qid=1453994651&sr=8-1&keywords=liferay+in+Action)
 * [Testing with JUnit](https://www.amazon.com/Testing-Junit-Frank-Appel/dp/1782166602/ref=sr_1_1?ie=UTF8&qid=1515952664&sr=8-1&keywords=junit+testing)
+* [Java Web Services: Up and Running 2nd ed.](https://www.amazon.com/Java-Web-Services-Running-Paperback/dp/B011DC8GLI/ref=sr_1_1?ie=UTF8&qid=1515955409&sr=8-1&keywords=java+web+services+up+and+running+2nd+edition)
