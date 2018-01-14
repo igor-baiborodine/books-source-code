@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>timeline</artifactId>
+  <version>${revision}</version>
+  
+  <parent>
+    <groupId>book.twju</groupId>
+    <artifactId>build</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../build/pom.xml</relativePath>
+  </parent>
+  
+  <dependencies>
+    <!-- Runtime -->
+    <dependency>
+      <groupId>book.twju</groupId>
+      <artifactId>timeline.util</artifactId>
+      <version>${revision}</version>
+    </dependency>
+    
+    <!-- Test -->
+    <dependency>
+      <groupId>book.twju</groupId>
+      <artifactId>timeline.test.util</artifactId>
+      <version>${revision}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>book.twju</groupId>
+      <artifactId>timeline.util.test.util</artifactId>
+      <version>${revision}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
