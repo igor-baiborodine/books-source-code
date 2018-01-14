@@ -1,0 +1,3 @@
+The ski service and the two publishers, one for base64 and the other for MTOM, are in the src directory.
+The Perl client is targeted at base64 version and the Java client at the MTOM version.
+

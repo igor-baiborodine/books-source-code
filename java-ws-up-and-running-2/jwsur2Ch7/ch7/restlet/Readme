@@ -1,0 +1,8 @@
+The aphorisms2.war file should be deployed to GlassFish (/domains/domain1/autodeploy).
+The client can be compiled and run in the usual way:
+
+   javac DispatchClient.java
+   java DispatchClient
+
+The POST test at the end fails for reasons given in the book.
+

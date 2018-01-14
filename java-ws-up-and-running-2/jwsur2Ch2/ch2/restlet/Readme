@@ -1,0 +1,4 @@
+The service can be deployed in the usual way with the Ant script. 
+There is also the executable Main.jar (java -jar Main.jar) as an alternative way of publishing.
+The file curls.txt includes some curl tests against the deployed service.
+

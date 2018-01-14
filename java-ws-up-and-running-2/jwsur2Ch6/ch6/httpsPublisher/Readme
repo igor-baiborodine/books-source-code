@@ -1,0 +1,8 @@
+javac *.java
+javac service/*.java
+java HttpsPublisher
+
+In a new command-prompt window:
+java HttpsClient
+perl httpsClient.pl
+

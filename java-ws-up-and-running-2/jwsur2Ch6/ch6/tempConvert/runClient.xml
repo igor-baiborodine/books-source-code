@@ -1,0 +1,21 @@
+<project name="TempConvertClient2" basedir="." default="run">
+  <property name="lib.dir" value="${user.home}/tomcat7/lib"/>
+  <property name="bin.dir" value="${user.home}/tomcat7/bin"/>
+  <path id="classpath">
+    <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    <fileset dir="${bin.dir}" includes="**/*.jar"/>
+  </path>
+  <target name="compile">
+    <javac srcdir="${basedir}" destdir="${basedir}" classpathref="classpath"/>
+  </target>
+  <target name="run" depends="compile">
+    <java fork="true" classname="TempConvertClient2">
+      <arg value="${arg1}"/>
+      <arg value="${arg2}"/>
+      <classpath>
+        <path refid="classpath"/>
+	<pathelement location="${basedir}"/>
+      </classpath>
+    </java>
+  </target>
+</project>

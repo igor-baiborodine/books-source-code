@@ -1,0 +1,4 @@
+javac *.java
+java GoogleClient
+java GoogleTrustingClient
+

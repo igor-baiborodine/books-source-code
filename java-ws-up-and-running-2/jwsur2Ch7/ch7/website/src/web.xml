@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1'?>
+<web-app>
+  <description>JSP frontend to TempConvert service</description>
+  <error-page>
+    <exception-type>java.lang.NumberFormatException</exception-type>
+    <location>/error.jsp</location>
+  </error-page>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>  

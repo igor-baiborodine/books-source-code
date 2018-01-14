@@ -1,0 +1,5 @@
+In the src directory: java -jar EchoPublisher.jar
+
+In this directory: ant -f runClient.xml
+
+

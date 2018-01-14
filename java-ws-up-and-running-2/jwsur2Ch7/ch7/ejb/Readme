@@ -1,0 +1,22 @@
+There's setup required to ensure successful deployment. When GlassFish3 is started, domain1 should
+start automatically. To ensure that this is so:
+
+  asadmin start-domain domain1
+
+The Derby database system needs to be started independently:
+
+  asadmin start-database
+
+The EAR file predService.ear needs to be copied to
+
+  /domains/domain1/autodeploy
+
+under the GlassFish3 install directory.
+
+The ClientEJB can be compiled and run straightforwardly; but the book explains in detail why the edit and
+delete tests will work the first time but not thereafter without modification. (The reason is
+that Derby manages the primary keys, which change on subsequent runs.)
+
+The JAR file embedded in the EAR is provided. If you'd like to build the EAR from scratch, see the
+book for details.
+

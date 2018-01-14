@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<web-app>
+  <servlet>
+    <servlet-name>predictor</servlet-name>
+    <servlet-class>predictions2.PredictionsServlet</servlet-class>
+  </servlet>
+
+  <security-role>
+    <role-name>bigshot</role-name>
+    <!-- other roles as needed -->
+  </security-role>
+
+  <security-constraint>
+    <web-resource-collection>
+      <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>bigshot</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+
+  <login-config>
+    <auth-method>BASIC</auth-method>
+  </login-config>
+
+  <servlet-mapping>
+    <servlet-name>predictor</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+</web-app>

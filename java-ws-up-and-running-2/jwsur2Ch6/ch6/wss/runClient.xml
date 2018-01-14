@@ -1,0 +1,21 @@
+<project name="EchoClientWSS" basedir="." default="run">
+  <property name="jar.dir" value="${basedir}/src"/>
+  <path id="classpath">
+    <fileset dir="${jar.dir}" includes="**/*.jar"/>
+  </path>
+  <target name="compile">
+    <javac srcdir="${basedir}" 
+	   destdir="${basedir}" 
+	   classpathref="classpath">
+      <src path="${basedir}"/> 
+    </javac>
+  </target>
+  <target name="run" depends="compile">
+    <java fork="true" classname="EchoClientWSS">
+      <classpath>
+        <path refid="classpath"/>
+	<pathelement location="${basedir}"/>
+      </classpath>
+    </java>
+  </target>
+</project>

@@ -1,0 +1,24 @@
+Copy the two WAR files to TOMCAT_HOME/webapps to deploy them.
+
+java -jar PredictionsHttpsClient.jar
+
+java -jar PredictionsHttpsClientAA.jar moe MoeMoeMoe
+
+For the latter to work, TOMCAT_HOME/conf/tomcat-users.xml must contain:
+
+<?xml version='1.0' encoding='utf-8'?>
+<tomcat-users>
+  <!--
+     <role rolename="tomcat"/>
+     <role rolename="role1"/>
+     <user username="tomcat" password="tomcat" roles="tomcat"/>
+     <user username="both" password="tomcat" roles="tomcat,role1"/>
+     <user username="role1" password="tomcat" roles="role1"/>
+     -->
+     <role rolename = "bigshot"/>
+     <user username = "moe" password = "MoeMoeMoe" roles = "bigshot"/>
+</tomcat-users>
+
+Also, the test.keystore file in this directory should be the same one that Tomcat uses as its keystore.
+See the book for details on setting up Tomcat for HTTPS.
+

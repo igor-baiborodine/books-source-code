@@ -1,0 +1,4 @@
+<Resource id = "predictionsDB" type = "DataSource">
+  JdbcDriver = org.hsqldb.jdbcDriver
+  JdbcUrl = jdbc:hsqldb:mem:predictionsDB
+</Resource>

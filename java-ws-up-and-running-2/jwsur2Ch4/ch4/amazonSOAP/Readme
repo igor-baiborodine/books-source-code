@@ -1,0 +1,7 @@
+To execute:
+
+java -jar AmazonClientBare <accessID> <secretKey>
+java -jar AmazonClientWrapped <accessID> <scretKey>
+
+The output is the same. The custom.xml file is used with wsimport to generate the "bare" artifacts in subdirectory amazon.
+

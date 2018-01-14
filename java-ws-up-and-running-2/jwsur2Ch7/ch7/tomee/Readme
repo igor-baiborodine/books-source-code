@@ -1,0 +1,5 @@
+TomEE must be started (startup.sh, just as with Tomcat7) and the EE extensions also must be 
+started (tomee.sh start). The WAR file can be deployed as is and the ClientEJB, the same
+one used for the GlassFish3 example, can be executed. Once again, the primary keys will
+differ after the first run.
+

@@ -1,0 +1,6 @@
+curl --request GET http://localhost:8080/adages2/
+curl --request GET http://localhost:8080/adages2/xml
+curl --request GET http://localhost:8080/adages2/json
+curl --request GET http://localhost:8080/adages2/xml/2
+curl --request POST --data "words=This is a test" http://localhost:8080/adages2/create
+curl --request DELETE http://localhost:8080/adages2/delete/6

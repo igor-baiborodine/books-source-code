@@ -1,0 +1,8 @@
+java -jar RandPublish1.jar
+java -jar RandPublish2.jar
+
+Both can be run at once, as they listen on different ports: the functionality is identical.
+The clients can be compiled and executed straightforwardly. 
+
+The misc subdirectory contains various XML files used to create the artifacts in the subdirectories.
+

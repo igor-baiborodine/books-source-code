@@ -1,0 +1,23 @@
+Copy tc.war to TOMCAT_HOME/webapps (or run the Ant script in the usual way)
+
+java TempConvertClient moe MoeMoeMoe
+
+For this to work, TOMCAT_HOME/conf/tomcat-users.xml must contain:
+
+<?xml version='1.0' encoding='utf-8'?>
+<tomcat-users>
+  <!--
+     <role rolename="tomcat"/>
+     <role rolename="role1"/>
+     <user username="tomcat" password="tomcat" roles="tomcat"/>
+     <user username="both" password="tomcat" roles="tomcat,role1"/>
+     <user username="role1" password="tomcat" roles="role1"/>
+     -->
+     <role rolename = "bigshot"/>
+     <user username = "moe" password = "MoeMoeMoe" roles = "bigshot"/>
+</tomcat-users>
+
+For TempConvertClient2 to work, the password "MoeMoeMoe" must be changed to
+the hash value (see the book for details). There is the Ant script runClient.xml
+to compile and execute the TempConvertClient2 code.
+

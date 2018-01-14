@@ -1,0 +1,15 @@
+The src/predictions/jaxws directory contains wsgen-generated classes to work around a bug in core Java 1.7. The
+workaround should have no impact on earlier versions (famous last words...). 
+
+The soap.war is ready to go. If you want to build from scratch:
+
+  ant -D war.name=soap deploy
+  java -jar PredictionsClient.jar moe MoeMoeMoe
+
+A VerbosityException is thrown during client execution. You can get other exceptions by giving a bad
+user/key pair, e.g., 
+
+  java -jar PredictionsClient.jar FRED fredfredfred
+
+generate a "FRED not registered!" fault.
+

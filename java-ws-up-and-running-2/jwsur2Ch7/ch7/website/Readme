@@ -1,0 +1,9 @@
+There are two files to deploy: tcWeb.war is deployed to GlassFish3 (/domains/domain1/autodeploy) and
+tcService.war is deployed to Tomcat (the Ant script could be used to build afresh and deploy). Then
+a browser can be opened to: 
+
+       http://localhost:8081/tcWeb
+
+The port number 8081 may differ on your system, depending on how you have Tomcat and GlassFish 
+configured.
+

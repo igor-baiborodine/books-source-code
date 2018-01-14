@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://rand/" xmlns:tns="http://rand/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="next1" type="tns:next1"/>
+
+  <xs:element name="next1Response" type="tns:next1Response"/>
+
+  <xs:element name="nextN" type="tns:nextN"/>
+
+  <xs:element name="nextNResponse" type="tns:nextNResponse"/>
+
+  <xs:complexType name="next1">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="next1Response">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nextN">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nextNResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

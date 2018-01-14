@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<web-app>
+  <listener>
+    <listener-class>
+      com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+    </listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>wsservlet</servlet-name>
+    <servlet-class>
+      com.sun.xml.ws.transport.http.servlet.WSServlet
+    </servlet-class>
+  </servlet>
+  
+  <security-role>
+    <role-name>bigshot</role-name>
+    <!-- other roles as needed -->
+  </security-role>
+  
+  <security-constraint>
+    <web-resource-collection>
+      <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>bigshot</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+  
+  <login-config>
+    <auth-method>BASIC</auth-method>
+  </login-config>
+  
+  <servlet-mapping>
+    <servlet-name>wsservlet</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+</web-app>

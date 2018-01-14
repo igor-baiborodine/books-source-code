@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	     xmlns:tns="http://rand/" 
+	     xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	     xmlns="http://schemas.xmlsoap.org/wsdl/" 
+	     targetNamespace="http://rand/" name="RandServiceService">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://rand/" schemaLocation="http://localhost:8888/rs?xsd=1"></xsd:import>
+    </xsd:schema>
+  </types>
+  <message name="next1">
+    <part name="parameters" element="tns:next1"></part>
+  </message>
+  <message name="next1Response">
+    <part name="parameters" element="tns:next1Response"></part>
+  </message>
+  <message name="nextN">
+    <part name="parameters" element="tns:nextN"></part>
+  </message>
+  <message name="nextNResponse">
+    <part name="parameters" element="tns:nextNResponse"></part>
+  </message>
+  <portType name="RandService">
+    <operation name="next1">
+      <input message="tns:next1"></input>
+      <output message="tns:next1Response"></output>
+    </operation>
+    <operation name="nextN">
+      <input message="tns:nextN"></input>
+      <output message="tns:nextNResponse"></output>
+    </operation>
+  </portType>
+  <binding name="RandServicePortBinding" type="tns:RandService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+    <operation name="next1">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+	<soap:body use="literal"></soap:body>
+      </input>
+      <output>
+	<soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="nextN">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+	<soap:body use="literal"></soap:body>
+      </input>
+      <output>
+	<soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+  </binding>
+  <service name="RandServiceService">
+    <port name="RandServicePort" binding="tns:RandServicePortBinding">
+      <soap:address location="http://localhost:8888/rs"></soap:address>
+    </port>
+  </service>
+</definitions>
